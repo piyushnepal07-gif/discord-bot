@@ -18,4 +18,13 @@ async def ping(ctx):
     await ctx.send("Pong!")
 
 bot.run(TOKEN)
+import time
+
+while True:
+    try:
+        bot.run(TOKEN)
+    except Exception as e:
+        print(f"❌ Bot crashed: {e}")
+        print("🔁 Restarting in 5 seconds...")
+        time.sleep(5)
 
